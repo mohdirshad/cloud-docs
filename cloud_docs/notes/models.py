@@ -16,6 +16,7 @@ class Category(models.Model):
 
 class Tag(models.Model):
     name = models.CharField(max_length=15)
+    slug = models.SlugField(max_length=20)
     
     def __unicode__(self):
         return self.name
@@ -33,7 +34,7 @@ class Note(models.Model):
     tags = models.ManyToManyField(Tag)
     created_on = models.DateTimeField(auto_now=True)
     last_modified = models.DateTimeField(auto_now_add=True)
-    status = models.CharField(max_length=1,choices=STATUS_CHOICES)
+    status = models.CharField(max_length=1,choices=STATUS_CHOICES, default="D")
     is_public = models.BooleanField(default=True)
     favorite = models.BooleanField(default=False)
     slug = models.SlugField(max_length=20)
