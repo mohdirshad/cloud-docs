@@ -32,7 +32,6 @@ class Create_notes(View):
 		note.save()
 		return HttpResponseRedirect('/notes/')
 		
-		user=request.User
-		notes = Note.objects.create(user=user , category= category 
+	 
 	    
 		 
