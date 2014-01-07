@@ -27,7 +27,7 @@ class Note(models.Model):
     ("F", "Final"),
     )
     user = models.ForeignKey(User)
-    Category = models.ForeignKey(Category)
+    category = models.ForeignKey(Category)
     title = models.CharField(max_length=50)
     body = models.TextField(blank=True, null=True)
     tags = models.ManyToManyField(Tag)
