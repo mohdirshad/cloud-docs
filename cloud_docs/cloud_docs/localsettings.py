@@ -1,6 +1,6 @@
-DBNAME="cloud_docs"
-DBUSER="kuldeep"
-DBPASSWORD="rishi"
+DBNAME="notesdb"
+DBUSER="notes"
+DBPASSWORD="notes123"
 DBHOST="127.0.0.1"
 
 DATABASES = {

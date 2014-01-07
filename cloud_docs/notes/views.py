@@ -1,9 +1,10 @@
 # Create your views here
-from django.Http import HttpResponse
+from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.views.generic.base import View
 from notes.models import Note
+from notes.forms import *
 
 class Notes(View):
     """class to fetch and store Notes"""
@@ -17,7 +18,7 @@ class Notes(View):
 
 class Create_notes(View):
     """create notes"""
-    form = noteform()
+    form = Noteform()
     template_name="createnote.html"
     
     def get(self, request, *args, **kwargs):
